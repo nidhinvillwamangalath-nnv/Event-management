@@ -115,7 +115,7 @@ while budget < total and len(selected) > 0:
 
     for i, (event, cost) in enumerate(selected.items(), 1):
 
-        print(f"{i}. {event} - ₹{cost}")
+        print(f"{i}. {event} - {cost}")
 
     try:
 
@@ -129,9 +129,9 @@ while budget < total and len(selected) > 0:
 
             total = sum(selected.values())
 
-            print(f" Removed '{event_to_remove}' (₹{removed_cost})")
+            print(f" Removed '{event_to_remove}' ({removed_cost})")
 
-            print(f" New Total Cost: ₹{total}")
+            print(f" New Total Cost: {total}")
 
         else:
             print(" Invalid choice.")
@@ -147,7 +147,7 @@ if len(selected) == 0:
 
 if budget >= total:
     print(f"\n Your current plan fits within your budget!")
-    print(f"Remaining balance: ₹{budget - total}")
+    print(f"Remaining balance: {budget - total}")
     
     
     contact = input(" Please enter your contact number for our staff to contact our lovely client for arrangeing a meeting: ")
